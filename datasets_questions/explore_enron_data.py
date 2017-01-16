@@ -19,4 +19,24 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
+### My code starts here
+print "Dataset length: ", len(enron_data)
+print "Number of features: ", len(enron_data.values()[0])
+
+
+print "First person data: ", enron_data.values()[0]
+# Count the number of POI:
+# person_name - key
+num_of_poi = 0
+for person_name in enron_data:
+    if (enron_data[person_name]["poi"] == 1):
+        num_of_poi += 1
+print "Number of POI: ", num_of_poi
+
+# Real POI count:
+#poi_names = open("../final_project/poi_names.txt").read().split('\n')
+#poi_y = [name for name in poi_names if "(y)" in name]
+#print("poi_names_count:", len(poi_y))
+
+
 
