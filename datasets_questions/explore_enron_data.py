@@ -19,7 +19,7 @@ import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
-### My code starts here
+### My code starts here ###
 print "Dataset length: ", len(enron_data)
 print "Number of features: ", len(enron_data.values()[0])
 
