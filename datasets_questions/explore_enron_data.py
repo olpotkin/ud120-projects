@@ -29,14 +29,14 @@ print "First person data: ", enron_data.values()[0]
 # person_name - key
 num_of_poi = 0
 for person_name in enron_data:
-    if (enron_data[person_name]["poi"] == 1):
+    if (enron_data[person_name]['poi'] == 1):
         num_of_poi += 1
 print "Number of POI: ", num_of_poi
 
-# Real POI count:
-#poi_names = open("../final_project/poi_names.txt").read().split('\n')
-#poi_y = [name for name in poi_names if "(y)" in name]
-#print("poi_names_count:", len(poi_y))
-
+# QUERY THE DATASET - 1
+# Total value of the stock belonging to James Prentice
+person_name = 'PRENTICE JAMES'
+parameter = 'total_stock_value'
+print "James Prentice stock: ", enron_data[person_name][parameter]
 
 
