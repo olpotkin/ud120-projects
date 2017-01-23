@@ -74,4 +74,23 @@ for p in enron_data:
         quantified_salaries += 1
 print "Quantified salaries: ", quantified_salaries
 
+# 1. Persons who has a NaN value for their total payments
+# 2. Count percentage of people from dataset as a whole
+q_total_payments = 0
+q_total = 0
+for p in enron_data:
+    q_total += 1
+    if enron_data[p]['total_payments'] == 'NaN':
+        q_total_payments += 1
+print "NaN for total payments have: ", q_total_payments
+print "NaN for total payments have (%): ", (float(q_total_payments)/float(q_total))*100
+
+# 1. POI who has a NaN value for their total payments
+# 2. Count percentage of POI from dataset as a whole
+num_of_poi = 0
+for p in enron_data:
+    if (enron_data[p]['poi'] == 1):
+        if enron_data[p]['total_payments'] == 'NaN':
+            num_of_poi += 1
+print "Number of POI: ", num_of_poi
 
