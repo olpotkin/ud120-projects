@@ -49,4 +49,29 @@ print "Messages from Wesley Colwell to PoI: ", enron_data[person_name][parameter
 # The value of stock options exercised by Jeffrey K Skilling?
 person_name = 'SKILLING JEFFREY K'
 parameter = 'exercised_stock_options'
-print "he value of stock options exercised by Jeffrey K Skilling: ", enron_data[person_name][parameter]
+print "Value of stock options exercised by Jeffrey K Skilling: ", enron_data[person_name][parameter]
+
+# Who took home the most money?
+person_name = 'FASTOW ANDREW S'
+parameter = 'total_payments'
+print "Andy Fastow: ", enron_data[person_name][parameter]
+person_name = 'SKILLING JEFFREY K'
+print "Jeffrey Skilling: ", enron_data[person_name][parameter]
+person_name = 'LAY KENNETH L'
+print "Ken Lay: ", enron_data[person_name][parameter]
+
+# Count valid emails
+valid_emails = 0
+for p in enron_data:
+    if enron_data[p]['email_address'] != 'NaN':
+        valid_emails += 1
+print "Valid emails: ", valid_emails
+
+# Count quantified salaries
+quantified_salaries = 0
+for p in enron_data:
+    if enron_data[p]['salary'] != 'NaN':
+        quantified_salaries += 1
+print "Quantified salaries: ", quantified_salaries
+
+
