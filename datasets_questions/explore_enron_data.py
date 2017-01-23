@@ -39,4 +39,14 @@ person_name = 'PRENTICE JAMES'
 parameter = 'total_stock_value'
 print "James Prentice stock: ", enron_data[person_name][parameter]
 
+# QUERY THE DATASET - 2
+# How many email messages do we have from Wesley Colwell to person of interest?
+person_name = 'COLWELL WESLEY'
+parameter = 'from_this_person_to_poi'
+print "Messages from Wesley Colwell to PoI: ", enron_data[person_name][parameter]
 
+# QUERY THE DATASET - 3
+# The value of stock options exercised by Jeffrey K Skilling?
+person_name = 'SKILLING JEFFREY K'
+parameter = 'exercised_stock_options'
+print "he value of stock options exercised by Jeffrey K Skilling: ", enron_data[person_name][parameter]
