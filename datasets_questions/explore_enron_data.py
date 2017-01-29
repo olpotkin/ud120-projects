@@ -89,7 +89,7 @@ print "NaN for total payments have (%): ", (float(q_total_payments)/float(q_tota
 # 2. Count percentage of POI from dataset as a whole
 num_of_poi = 0
 for p in enron_data:
-    if (enron_data[p]['poi'] == 1):
+    if enron_data[p]['poi'] == 1:
         if enron_data[p]['total_payments'] == 'NaN':
             num_of_poi += 1
 print "Number of POI: ", num_of_poi
